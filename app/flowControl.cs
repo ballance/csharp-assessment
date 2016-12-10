@@ -1,6 +1,6 @@
 public class FLowControl
 {
-  public static FizzBuzz(int input)
+  public static string FizzBuzz(int input)
   {
        // write a function that receives a number as its argument;
       // if the number is divisible by 3, the function should return 'fizz';
@@ -10,5 +10,6 @@ public class FLowControl
       //
       // otherwise the function should return the number, or false if no number
       // was provided or the value provided is not a number}
+      return input.ToString();
   }
 }

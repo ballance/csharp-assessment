@@ -2,9 +2,10 @@
   "version": "1.0.0-*",
   "buildOptions": {
     "debugType": "portable",
-    "emitEntryPoint": true
+    "emitEntryPoint": false
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "frameworks": {
     "netcoreapp1.0": {
       "dependencies": {

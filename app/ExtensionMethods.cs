@@ -1,8 +1,8 @@
-public class ExtensionMethods
+public static class ExtensionMethods
 {
-  public string Reverse(this string)
+  public static string Reverse(this string current)
   {
-    // Reverse string
+      return current;
   }
 
   
