@@ -1,51 +1,52 @@
+using System;
 using System.Collections.Generic;
 
-public class Regex
+namespace Assessment
 {
-    public bool ContainsNumber(string input)
+    public class Regex
     {
-        return false;
+        public bool ContainsNumber(string input)
+        {
+            throw new NotImplementedException();
+        }
 
-    }
+        public bool ContainsRepeatingLetter(string input)
+        {
+            throw new NotImplementedException();
+        }
 
-    public bool ContainsRepeatingLetter(string input)
-    {
-        return false;
+        public bool EndsWithVowel(string input)
+        {
+            throw new NotImplementedException();
+        }
 
-    }
+        public List<int> CaptureThreeNumbers(string input)
+        {
+            throw new NotImplementedException();
+        }
 
-    public bool EndsWithVowel(string input)
-    {
+        public bool ValidateMastercard(string v)
+        {
+            throw new NotImplementedException();
+        }
 
-        return false;
-    }
+        public bool MatchesPattern(string regex, string input)
+        {
+            throw new NotImplementedException();
+        }
 
-    public List<int> CaptureThreeNumbers(string input)
-    {
-        return new List<int>();
+        public bool IsEmailAddress(string input)
+        {
+            throw new NotImplementedException();
+        }
+        public bool IsUsd(string input)
+        {
+            throw new NotImplementedException();
+        }
 
-    }
-
-    public bool MatchesPattern(string regex, string input)
-    {
-        return false;
-    }
-
-    public bool IsEmailAddress(string input)
-    {
-        return false;
-
-    }
-
-    public bool IsUsd(string input)
-    {
-        return false;
-
-    }
-
-    public bool IsUrl(string input)
-    {
-        return false;
-
+        public bool IsUrl(string input)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
