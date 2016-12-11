@@ -16,7 +16,7 @@ namespace Assessment.Driver
 
         public static void RunArrays()
         {
-            var arrays = new Arrays();
+            var arrays = new ArrayManipulator();
 
             int test = arrays.Sum(new int[]{ 1, 2, 3});
 

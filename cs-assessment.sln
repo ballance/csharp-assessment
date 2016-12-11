@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Assessment", "app\Assessment.xproj", "{AD2A389E-B31C-4B5D-A4FB-3D030D196DF8}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Assessment", "Assessment\Assessment.xproj", "{AD2A389E-B31C-4B5D-A4FB-3D030D196DF8}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Assessment.Tests", "tests\Assessment.Tests.xproj", "{42B4486E-61D4-414A-80CE-4A9C8683EE15}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Assessment.Tests", "Assessment.Tests\Assessment.Tests.xproj", "{42B4486E-61D4-414A-80CE-4A9C8683EE15}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Assessment.Driver", "Assessment.Driver\Assessment.Driver.xproj", "{432DC618-43DA-4B4F-A690-38F0F7719E30}"
 EndProject
