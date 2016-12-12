@@ -1,7 +1,3 @@
-using System.Runtime.InteropServices.ComTypes;
-using System.Threading.Tasks;
-using Assessment.Models;
-using Newtonsoft.Json;
 using Xunit;
 
 namespace Assessment.Tests
