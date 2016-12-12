@@ -12,7 +12,7 @@ namespace Assessment.Tests
     public class AsyncTests
     {
         [Fact]
-        // This method should reach out to https://jsonplaceholder.typicode.com/posts/7, asynchronously retrieve the contents there, and return the typed result
+        // This method should reach out to https://jsonplaceholder.typicode.com/posts/6, asynchronously retrieve the contents there, and return the result as a string
         public async void Should_Retrive_JSON_Object_As_String_Asynchronously()
         {
             var async = new Async();
@@ -43,11 +43,7 @@ namespace Assessment.Tests
                 body = "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
             };
 
-            //@"{""userId"": 1,""id"": 6,""title"": """",""body"": """"}";
-
             Assert.Equal(expectedResult, result);
-            //Assert.True(expectedResult.Equals(result));
         }
-
     }
 }

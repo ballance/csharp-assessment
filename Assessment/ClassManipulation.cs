@@ -1,5 +1,3 @@
-
-
 using System;
 using Assessment.Models;
 
@@ -9,16 +7,17 @@ using Assessment.Models;
 * populated at all; your job is to fill them out.
 */
 
-
 namespace Assessment
 {
     public class ClassManipulation
     {
         public Person CreatePerson(string FirstName, string LastName, DateTime BirthDate)
         {
-            var person = new Person();
-            person.FirstName = FirstName;
-            person.LastName = LastName;
+            var person = new Person
+            {
+                FirstName = FirstName,
+                LastName = LastName
+            };
             person.SetBirthdate(BirthDate);
             return person;
         }

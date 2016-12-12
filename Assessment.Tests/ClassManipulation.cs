@@ -1,23 +1,26 @@
-//if ( typeof window === 'undefined' ) {
-//  require('../../app/bestPractices');
-//  var expect = require('chai').expect;
-//}
+using System;
+using Assessment.Models;
+using Xunit;
 
-//describe('best practices', function(){
-//  it('you should avoid global variables', function() {
-//    bestPracticesAnswers.globals();
-//    expect(window.myObject).not.to.be.ok;
-//  });
+namespace Assessment.Tests
+{
+    public class ClassManiuplationTests
+    {
+        [Fact]
+        public void Should_Create_Person()
+        {
+            var chris = new Person
+            {
+                FirstName = "Chris",
+                LastName = "Ballance"
+            };
+            chris.SetBirthdate(new DateTime(1982, 7, 16));
 
-//  it('you should use parseInt correctly', function() {
-//    expect(bestPracticesAnswers.parseInt('12')).to.eql(12);
-//    expect(bestPracticesAnswers.parseInt('12px')).to.eql(12);
-//    expect(bestPracticesAnswers.parseInt('0x12')).to.eql(0);
-//  });
+            Assert.Equal("Chris", chris.FirstName);
+            Assert.Equal("Ballance", chris.LastName);
+            Assert.True(chris.Age > 33, "Chris is older than 33");
+            Assert.True(chris.Age < 35, "Chris is younger than 35");
 
-//  it('you should understand strict comparison', function() {
-//    expect(bestPracticesAnswers.identity(1, '1')).to.eql(false);
-//    expect(bestPracticesAnswers.identity(1, 1)).to.eql(true);
-//    expect(bestPracticesAnswers.identity(0, false)).to.eql(false);
-//  });
-//});
+        }
+    }
+}
