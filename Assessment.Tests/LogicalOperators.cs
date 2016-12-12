@@ -1,22 +1,43 @@
-//if ( typeof window === 'undefined' ) {
-//  require('../../app/logicalOperators');
-//  var expect = require('chai').expect;
-//}
+using Xunit;
 
-//describe('logical operators', function(){
-//  it('you should be able to work with logical or', function() {
-//    expect(logicalOperatorsAnswers.or(false, true)).to.be.ok;
-//    expect(logicalOperatorsAnswers.or(true, false)).to.be.ok;
-//    expect(logicalOperatorsAnswers.or(true, true)).to.be.ok;
-//    expect(logicalOperatorsAnswers.or(false, false)).not.to.be.ok;
-//    expect(logicalOperatorsAnswers.or(3, 4)).to.not.eq(7);
-//  });
+namespace Assessment.Tests
+{
+    public class LogicalOperatorTests
+    {
+        [Fact]
+        public void Should_Verify_Or()
+        {
+            Assert.True(LogicalOperators.Or(true, true));
+            Assert.True(LogicalOperators.Or(false, true));
+            Assert.True(LogicalOperators.Or(true, false));
+            Assert.False(LogicalOperators.Or(false, false));
+        }
 
-//  it('you should be able to work with logical and', function() {
-//    expect(logicalOperatorsAnswers.and(false, true)).not.to.be.ok;
-//    expect(logicalOperatorsAnswers.and(false, false)).not.to.be.ok;
-//    expect(logicalOperatorsAnswers.and(true, false)).not.to.be.ok;
-//    expect(logicalOperatorsAnswers.and(true, true)).to.be.ok;
-//    expect(logicalOperatorsAnswers.and(3, 4)).to.be.ok;
-//  });
-//});
+        [Fact]
+        public void Should_Verify_And()
+        {
+            Assert.True(LogicalOperators.And(true, true));
+            Assert.False(LogicalOperators.And(false, true));
+            Assert.False(LogicalOperators.And(true, false));
+            Assert.False(LogicalOperators.And(false, false));
+        }
+
+        [Fact]
+        public void Should_Verify_Xor()
+        {
+            Assert.False(LogicalOperators.Xor(true, true));
+            Assert.True(LogicalOperators.Xor(false, true));
+            Assert.True(LogicalOperators.Xor(true, false));
+            Assert.False(LogicalOperators.Xor(false, false));
+        }
+
+        [Fact]
+        public void Should_Verify_Nand()
+        {
+            Assert.False(LogicalOperators.Nand(true, true));
+            Assert.True(LogicalOperators.Nand(false, true));
+            Assert.True(LogicalOperators.Nand(true, false));
+            Assert.True(LogicalOperators.Nand(false, false));
+        }
+    }
+}

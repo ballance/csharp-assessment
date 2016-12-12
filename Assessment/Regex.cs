@@ -5,46 +5,46 @@ namespace Assessment
 {
     public class Regex
     {
-        public bool ContainsNumber(string input)
+        public static bool ContainsNumber(string input)
         {
             throw new NotImplementedException();
         }
 
-        public bool ContainsRepeatingLetter(string input)
+        public static bool ContainsRepeatingLetter(string input)
         {
             throw new NotImplementedException();
         }
 
-        public bool EndsWithVowel(string input)
+        public static bool EndsWithVowel(string input)
         {
             throw new NotImplementedException();
         }
 
-        public List<int> CaptureThreeNumbers(string input)
+        public static List<int> CaptureThreeNumbers(string input)
         {
             throw new NotImplementedException();
         }
 
-        public bool ValidateMastercard(string v)
+        public static bool ValidateMastercard(string v)
         {
             throw new NotImplementedException();
         }
 
-        public bool MatchesPattern(string regex, string input)
+        public static bool MatchesPattern(string regex, string input)
         {
             throw new NotImplementedException();
         }
 
-        public bool IsEmailAddress(string input)
+        public static bool IsEmailAddress(string input)
         {
             throw new NotImplementedException();
         }
-        public bool IsUsd(string input)
+        public static bool IsUsd(string input)
         {
             throw new NotImplementedException();
         }
 
-        public bool IsUrl(string input)
+        public static bool IsUrl(string input)
         {
             throw new NotImplementedException();
         }

@@ -1,26 +1,28 @@
 
+using System;
+
 namespace Assessment
 {
     public class LogicalOperators
     {
-        public bool Or(bool a, bool b)
+        public static bool Or(bool a, bool b)
         {
-            return false;
+            throw new NotImplementedException();
         }
 
-        public bool And(bool a, bool b)
+        public static bool And(bool a, bool b)
         {
-            return false;
+            throw new NotImplementedException();
         }
 
-        public bool Xor(bool a, bool b)
+        public static bool Xor(bool a, bool b)
         {
-            return false;
+            throw new NotImplementedException();
         }
 
-        public bool Nand(bool a, bool b)
+        public static bool Nand(bool a, bool b)
         {
-            return false;
+            throw new NotImplementedException();
         }
     }
 }
