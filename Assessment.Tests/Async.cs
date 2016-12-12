@@ -1,40 +1,53 @@
-//if ( typeof window === 'undefined' ) {
-//  require('../../app/async');
-//  var expect = require('chai').expect;
-//}
+using System;
+using System.IO;
+using System.Net;
+using System.Runtime.InteropServices.ComTypes;
+using System.Threading.Tasks;
+using Assessment.Models;
+using Newtonsoft.Json;
+using Xunit;
 
-//describe('async behavior', function() {
-//  it('you should understand how to use promises to handle asynchronicity', function(done) {
-//    var flag = false;
-//    var finished = 0;
-//    var total = 2;
+namespace Assessment.Tests
+{
+    public class AsyncTests
+    {
+        [Fact]
+        // This method should reach out to https://jsonplaceholder.typicode.com/posts/7, asynchronously retrieve the contents there, and return the typed result
+        public async void Should_Retrive_JSON_Object_As_String_Asynchronously()
+        {
+            var async = new Async();
+            var result = await async.GetRemoteDataAsStringAsynchronously("https://jsonplaceholder.typicode.com/posts/6");
 
-//    function finish(_done) {
-//      if (++finished === total) { _done(); }
-//    }
+            var expectedResultObject = new Post()
+            {
+                id = 6,
+                userId = 1,
+                title = "dolorem eum magni eos aperiam quia",
+                body = "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+            };
+            var expectedResult = JsonConvert.SerializeObject(expectedResultObject, Formatting.Indented).Replace(Environment.NewLine, "\n");
+            Assert.Equal(expectedResult, result);
+        }
 
-//    asyncAnswers.async(true).then(function(result) {
-//      flag = result;
-//      expect(flag).to.eql(true);
-//      finish(done);
-//    });
+        [Fact]
+        // This method should reach out to https://jsonplaceholder.typicode.com/posts/7, asynchronously retrieve the contents there, and return the typed result
+        public async void Should_Retrive_JSON_Object_As_Post_Type_Asynchronously()
+        {
+            var async = new Async();
+            var result = await async.GetRemoteDataAsPostObjectAsynchronously("https://jsonplaceholder.typicode.com/posts/6");
+            var expectedResult = new Post()
+            {
+                id = 6,
+                userId = 1,
+                title = "dolorem eum magni eos aperiam quia",
+                body = "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+            };
 
-//    asyncAnswers.async('success').then(function(result) {
-//      flag = result;
-//      expect(flag).to.eql('success');
-//      finish(done);
-//    });
+            //@"{""userId"": 1,""id"": 6,""title"": """",""body"": """"}";
 
-//    expect(flag).to.eql(false);
-//  });
+            Assert.Equal(expectedResult, result);
+            //Assert.True(expectedResult.Equals(result));
+        }
 
-//  it('you should be able to retrieve data from the server and return a sorted array of names', function(done) {
-//    var url = '/data/testdata.json';
-
-//    asyncAnswers.manipulateRemoteData(url).then(function(result) {
-//      expect(result).to.have.length(5);
-//      expect(result.join(' ')).to.eql('Adam Alex Matt Paul Rebecca');
-//      done();
-//    });
-//  });
-//});
+    }
+}

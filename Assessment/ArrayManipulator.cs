@@ -10,68 +10,67 @@ namespace Assessment
 
         public ArrayManipulator(int[] initialArray)
         {
-            _currentArray = initialArray ?? new int[0];
+            throw new NotImplementedException();
         }
 
         public int Sum(int[] input)
         {
-            return -1;
+            throw new NotImplementedException();
         }
 
         public int[] Remove(int indexToRemove)
         {
-            return _currentArray;
+            throw new NotImplementedException();
         }
 
         public int[] RemoveWithoutCopy(int indexToRemove)
         {
-            return _currentArray;
+            throw new NotImplementedException();
         }
 
         public int[] Append(int toAppend)
         {
-            return _currentArray;
+            throw new NotImplementedException();
         }
 
         public int[] Truncate(int placesToTruncate)
         {
-            return _currentArray;
+            throw new NotImplementedException();
         }
 
         public int[] Prepend(int toPrepend)
         {
-            return _currentArray;
+            throw new NotImplementedException();
         }
 
         public int[] Concat(int[] left, int[] right)
         {
-            return _currentArray;
+            throw new NotImplementedException();
         }
 
         public int[] Insert(int item, int index)
         {
-            return new[] { 1 };
-
+            throw new NotImplementedException();
         }
 
         public int Count(int[] input)
         {
-            return -1;
+            throw new NotImplementedException();
         }
 
         public int[] Duplicates(int[] input)
         {
-            return new[] { 1 };
+            throw new NotImplementedException();
         }
 
         public int[] Square()
         {
-            return _currentArray;
+            throw new NotImplementedException();
         }
 
         public int[] FindAllOccurrances(int occuranceToFind)
         {
-            return new[] { 1 };
+            throw new NotImplementedException();
         }
     }
 }
